@@ -1,0 +1,3 @@
+class Instagrammer < ApplicationRecord
+
+end

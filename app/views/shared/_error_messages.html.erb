@@ -1,0 +1,12 @@
+<% if @instagrammer.errors.any? %>
+	<div id="error_explanation">
+		<div class="alert alert-danger">
+			The form contains <%= pluralize(instagrammer.errors.count, "error") %>
+		</div>
+		<ul>
+			<% @instagrammer.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>

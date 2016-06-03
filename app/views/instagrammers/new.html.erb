@@ -1,0 +1,51 @@
+<div class="submission">
+	<div class="container">
+		<div class="form">
+			<h1>Sign up Instagrammers</h1>
+				<%= form_for(@instagrammer) do |f| %>
+					<%= render 'shared/error_messages' %>
+				<ul>
+					<li>
+					<%= f.text_field :instagram, :placeholder => "Pseudo Instagram", class: 'form-control' %>
+					</li>
+					<li>
+					<%= f.text_field :surname, :placeholder => "Prénom", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :family_name, :placeholder => "Nom", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :sex, :placeholder => "Sexe", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.date_select :age, {order: [:day,:month, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
+					</li>
+
+					<li>
+						<%= f.email_field :email, :placeholder => "email", class: 'form-control' %>
+					</li> 
+					<li>
+						<%= f.text_field :favorite_brands, :placeholder => "Marques préférées", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :desired_products, :placeholder => "Produits désirés", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :other_support, :placeholder => "Autres réseaux sociaux", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :newsletter, :placeholder => "newsletter", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :hobbies, :placeholder => "Hobbies", class: 'form-control' %>
+					</li>
+					<li>
+						<%= f.text_field :newsletter, :placeholder => "newsletter", class: 'form-control' %>
+					</li>
+				</ul>
+						<%= f.submit "Create an account"%>
+					<% end %> 
+		</div>
+	</div>
+</div>
+
