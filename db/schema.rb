@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601143046) do
+ActiveRecord::Schema.define(version: 20160603143335) do
 
   create_table "instagrammers", force: :cascade do |t|
     t.string   "instagram"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160601143046) do
     t.string   "favorite_instagrammer"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.index ["email"], name: "index_instagrammers_on_email"
   end
 
 end
